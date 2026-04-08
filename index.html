@@ -1,12 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Daily Zen</title>
-  <link rel="stylesheet" href="index.css" />
+    <meta charset="UTF-8">
+    <title>Daily Zen Dashboard</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- Fonts used for better look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <!-- Confetti script for task completion -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
-  <script src="index.js"></script>
+    
+    <div class="top-nav">
+        <h1>My Zen Space</h1>
+        <div class="nav-btns">
+            <button id="modeBtn">🌙 Theme</button>
+            <button id="bgBtn">🖼️ Background</button>
+        </div>
+    </div>
+
+    <!-- Main Section for Timer -->
+    <div class="timer-area">
+        <div class="digital-clock-img">
+            <h1 id="timerText">00:00:00</h1>
+        </div>
+        
+        <div class="input-controls">
+            <input type="text" id="timeInput" placeholder="Set time (e.g. 10m)">
+            <div class="btns">
+                <button id="startBtn">Start</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote fixed to bottom left -->
+    <div class="left-quote-box">
+        <p id="quote">Quote will appear here...</p>
+        <span id="author"></span>
+        <button id="nextQuote">Get New Quote</button>
+    </div>
+
+    <!-- To do list fixed to bottom right -->
+    <div class="right-todo-box">
+        <div class="todo-title">
+            <h3>My Tasks</h3>
+            <button id="showPlus">+</button>
+        </div>
+        <div id="inputBox" class="hidden">
+            <input type="text" id="newTask" placeholder="Add a task...">
+        </div>
+        <ul id="taskList">
+            <!-- Tasks will be added here -->
+        </ul>
+    </div>
+
+    <div class="footer">
+        Made with ❤️ by Sneha
+    </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
